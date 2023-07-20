@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   selectFilteredContacts,
-  selectLoading,
   selectError,
-} from 'redux/selectors';
-import { fetchContacts } from 'redux/operations';
+  selectLoading,
+} from 'redux/contacts/selectors';
+import { fetchContacts } from 'redux/contacts/operations';
 
 export const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
@@ -21,7 +21,6 @@ export const ContactList = () => {
 
   return (
     <>
-      {loading && <p>Loading...</p>}
       {!filteredContacts?.length && !error && !loading && (
         <p>No contacts. Enter data</p>
       )}

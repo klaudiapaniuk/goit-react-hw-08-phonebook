@@ -1,6 +1,6 @@
 import styles from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
+import { setFilter } from 'redux/contacts/filterSlice';
 
 export const Filter = () => {
   const filter = useSelector(state => state.filter);
