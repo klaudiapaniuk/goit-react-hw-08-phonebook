@@ -16,7 +16,7 @@ export const Form = () => {
     const newContact = {
       id: nanoid(),
       name: name,
-      phone: number,
+      number: number,
     };
     dispatch(addContact(newContact));
     e.target.reset();
